@@ -1,0 +1,87 @@
+@use "./variables" as v;
+
+@mixin font($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+.services {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  & .service-link {
+    @include font(14px, v.$titleFontWeight, 17px);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: v.$defaultTitleColor;
+
+    &::after {
+      content: url(../images/arrow-right.png);
+      padding-left: 6px;
+    }
+  }
+
+  & .title {
+    @include font(30px, 700, 37px);
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.service::before {
+  content: '';
+  width: 92px;
+  height: 92px;
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 24px;
+  background-image: url(../images/service-one.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service:nth-of-type(2)::before {
+  content: '';
+  background-image: url(../images/service-two.png);
+}
+
+.service:nth-of-type(3)::before {
+  content: '';
+  background-image: url(../images/service-three.png);
+}
+
+.service:nth-of-type(4)::before {
+  content: '';
+  background-image: url(../images/service-four.png);
+}
+
+.service:nth-of-type(5)::before {
+  content: '';
+  background-image: url(../images/service-five.png);
+}
+
+.service:nth-of-type(6)::before {
+  content: '';
+  background-image: url(../images/service-six.png);
+}
+
+.services-title {
+  @include font(22px, 700, 27px);
+  color: v.$defaultTitleColor;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.description {
+  @include font(16px, 400, 26px);
+  margin-top: v.$defaultMargin;
+  margin-bottom: 30px;
+  color: v.$defaultTextColor;
+}

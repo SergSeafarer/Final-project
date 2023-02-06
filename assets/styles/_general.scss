@@ -1,0 +1,16 @@
+@import "./normalize";
+@import url(../fonts/stylesheet.css);
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 315px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
