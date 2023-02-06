@@ -1,0 +1,92 @@
+@use "./variables" as v;
+
+@mixin font($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+.partners {
+  padding-top: 60px;
+
+  &-title {
+    @include font(14px, v.$titleFontWeight, 17px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: v.$defaultMargin;
+    margin-bottom: 30px;
+  }
+}
+
+.partner {
+  width: 375px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1C4280;
+  background-image: url(../images/hillel-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.second-partner {
+  background-color: #143646;
+  background-image: url(../images/wanna-logo.png);
+}
+
+.third-partner {
+  background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+  background-image: url(../images/tapgerine-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fourth-partner {
+  background-color: #9E4DC3;
+  background-image: url(../images/3d-logo.png);
+}
+
+.fifth-partner {
+  background-color: #FD9339;
+  background-image: url(../images/orange-logo.png);
+}
+
+.sixth-partner {
+  background-color:  #E2E2E4;
+  background-image: url(../images/adtelige-logo.png);
+}
+
+.seventh-partner {
+  background-color: #C71C36;
+  background-image: url(../images/clikky-logo.png);
+}
+
+.eighth-partner {
+  background-color: #DCF3F9;
+  background-image: url(../images/ecolease.png);
+}
+
+.nineth-partner {
+  background-color: #EAEAEA;
+  background-image: url(../images/infra-logo.png);
+}
+
+.tenth-partner {
+  background-color: #282240;
+  background-image: url(../images/city-logo.png);
+}
+
+.eleventh-partner {
+  background-color: #1D4568;
+  background-image: url(../images/art-logo.png);
+}
+
+.twelveth-partner {
+  background-color: #000000;
+  background-image: url(../images/card-logo.png);
+}
+
+.partner-link:nth-of-type(n+7) {
+  display: none;
+}
