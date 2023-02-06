@@ -493,4 +493,79 @@ body {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .wrapper {
+    width: 648px;
+  }
+  .partners-wrapper {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 60px;
+  }
+  .content .description {
+    margin-bottom: 0;
+  }
+  .service {
+    width: 294px;
+  }
+  .services {
+    padding-top: 60px;
+  }
+  .services .title {
+    margin-bottom: 60px;
+  }
+  .partner-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .partner-links .partner {
+    width: 256px;
+  }
+  .partner-links .partner-link:nth-of-type(n+7) {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 904px;
+  }
+  .partners-wrapper {
+    width: 1024px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 1320px;
+  }
+  .partners-wrapper {
+    width: 1440px;
+  }
+  .service {
+    width: 400px;
+  }
+  .partner-links .partner {
+    width: 360px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    width: 1600px;
+  }
+  .partners-wrapper {
+    width: 1720px;
+  }
+  .service {
+    width: 494px;
+  }
+  .partner-links .partner {
+    width: 430px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
