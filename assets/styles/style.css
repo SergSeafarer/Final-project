@@ -566,6 +566,18 @@ body {
   .partner-links .partner {
     width: 430px;
   }
+  .first-partner {
+    border-top-left-radius: 10px;
+  }
+  .fourth-partner {
+    border-top-right-radius: 10px;
+  }
+  .nineth-partner {
+    border-bottom-left-radius: 10px;
+  }
+  .twelveth-partner {
+    border-bottom-right-radius: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
