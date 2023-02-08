@@ -639,6 +639,17 @@ body {
   .partner-links .partner-link:nth-of-type(n+7) {
     display: block;
   }
+  .slider {
+    padding-top: 80px;
+  }
+  .team .slider-description {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .photo {
+    background-image: url(../images/photo2.png);
+    min-width: 648px;
+  }
 }
 @media (min-width: 1024px) {
   .wrapper {
@@ -646,6 +657,17 @@ body {
   }
   .partners-wrapper {
     width: 1024px;
+  }
+  .slider-content {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+  .photo {
+    background-image: url(../images/photo.png);
+    border-radius: 12px 0 0 12px;
+    min-width: 400px;
+    min-height: 528px;
   }
 }
 @media (min-width: 1440px) {
@@ -660,6 +682,10 @@ body {
   }
   .partner-links .partner {
     width: 360px;
+  }
+  .photo {
+    background-image: url(../images/photo4.png);
+    min-height: 344px;
   }
 }
 @media (min-width: 1920px) {
@@ -686,6 +712,10 @@ body {
   }
   .twelveth-partner {
     border-bottom-right-radius: 10px;
+  }
+  .photo {
+    min-height: 298px;
+    border-radius: 12px 0 0 12px;
   }
 }
 
