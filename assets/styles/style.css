@@ -419,6 +419,103 @@ body {
   color: #FFFFFF;
 }
 
+.slider {
+  position: relative;
+  padding-top: 50px;
+}
+.slider::before {
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 40px;
+  right: 40px;
+  border-radius: 0 0 12px 12px;
+  background-color: #E7E7F2;
+}
+.slider .slider-content {
+  border-radius: 12px;
+  background-color: #F5F5FA;
+}
+
+.team-description {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.team-description .slider-description {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 37px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.team-link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+  text-decoration: none;
+}
+.team-link::after {
+  content: url(../images/arrow-right.png);
+  padding-left: 4px;
+}
+
+.photo {
+  min-height: 500px;
+  background-image: url(../images/photo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #B3B3BA;
+  margin: 0;
+}
+
+.rank {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #B3B3BA;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.slider-dots .active {
+  background-color: rgb(36, 163, 255);
+}
+
+.dots {
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(36, 163, 255, 0.2);
+  margin-right: 15px;
+}
+.dots:last-of-type {
+  margin-right: 0;
+}
+
 .partners {
   padding-top: 60px;
 }
