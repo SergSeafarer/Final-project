@@ -602,6 +602,115 @@ body {
   display: none;
 }
 
+.publications {
+  padding-top: 30px;
+  background-color: #F5F5FA;
+}
+.publications .cards-content {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+
+.publications-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  color: #24A3FF;
+}
+.publications-link::after {
+  content: url(../images/arrow-right.png);
+  padding-left: 6px;
+}
+
+.publications-title {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+}
+
+.cards {
+  text-decoration: none;
+  position: relative;
+}
+.cards:nth-of-type(1)::after {
+  content: "";
+  height: 4px;
+  background-color: #E6E6F0;
+  position: absolute;
+  bottom: 133px;
+  left: 30px;
+  right: 30px;
+}
+.cards:nth-of-type(n+2)::after {
+  content: "";
+  height: 4px;
+  background-color: #E6E6F0;
+  position: absolute;
+  bottom: 155px;
+  left: 30px;
+  right: 30px;
+}
+
+.publication-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.publication-image {
+  background-image: url(../images/equity.png);
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-two {
+  background-image: url(../images/penalty.png);
+}
+
+.card-three {
+  background-image: url(../images/millennial.png);
+}
+
+.publication-text {
+  padding: 30px;
+}
+.publication-text .publication-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #24A3FF;
+}
+.publication-text .publication-description {
+  margin-top: 34px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000000;
+}
+.publication-text .publication-date {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+  letter-spacing: 1px;
+}
+
 @media (min-width: 768px) {
   .wrapper {
     width: 648px;
@@ -650,6 +759,30 @@ body {
     background-image: url(../images/photo2.png);
     min-width: 648px;
   }
+  .publication-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .publications-title {
+    margin-top: 10px;
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .cards {
+    display: flex;
+    max-width: 309px;
+  }
+  .cards:nth-of-type(1)::after {
+    bottom: 215px;
+  }
+  .cards:last-of-type {
+    max-width: 648px;
+  }
+  .cards:last-of-type::after {
+    bottom: 89px;
+  }
 }
 @media (min-width: 1024px) {
   .wrapper {
@@ -669,6 +802,18 @@ body {
     min-width: 400px;
     min-height: 528px;
   }
+  .cards {
+    max-width: 282px;
+  }
+  .cards:nth-of-type(2n+1)::after {
+    bottom: 257px;
+  }
+  .cards:nth-of-type(2)::after {
+    bottom: 177px;
+  }
+  .cards:last-of-type {
+    max-width: 282px;
+  }
 }
 @media (min-width: 1440px) {
   .wrapper {
@@ -686,6 +831,18 @@ body {
   .photo {
     background-image: url(../images/photo4.png);
     min-height: 344px;
+  }
+  .cards {
+    max-width: 420px;
+  }
+  .cards:last-of-type {
+    max-width: 420px;
+  }
+  .cards:nth-of-type(2n+1)::after {
+    bottom: 151px;
+  }
+  .cards:nth-of-type(2)::after {
+    bottom: 111px;
   }
 }
 @media (min-width: 1920px) {
@@ -716,6 +873,12 @@ body {
   .photo {
     min-height: 298px;
     border-radius: 12px 0 0 12px;
+  }
+  .cards:nth-of-type(n+1) {
+    max-width: 513px;
+  }
+  .cards:nth-of-type(2n+1)::after {
+    bottom: 131px;
   }
 }
 
