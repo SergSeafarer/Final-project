@@ -855,6 +855,12 @@ body {
   .service {
     width: 494px;
   }
+  .services .service-link:hover {
+    color: #F0145A;
+  }
+  .services .service-link:hover::after {
+    content: url(../images/arrow-red.png);
+  }
   .partner-links .partner {
     width: 430px;
   }

@@ -187,6 +187,14 @@
     width: 494px;
   }
 
+  .services .service-link:hover {
+    color: #F0145A;
+
+    &::after {
+      content: url(../images/arrow-red.png);
+    }
+  }
+
   .partner-links .partner {
     width: 430px;
   }
