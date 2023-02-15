@@ -639,25 +639,6 @@ body {
 
 .cards {
   text-decoration: none;
-  position: relative;
-}
-.cards:nth-of-type(1)::after {
-  content: "";
-  height: 4px;
-  background-color: #E6E6F0;
-  position: absolute;
-  bottom: 133px;
-  left: 30px;
-  right: 30px;
-}
-.cards:nth-of-type(n+2)::after {
-  content: "";
-  height: 4px;
-  background-color: #E6E6F0;
-  position: absolute;
-  bottom: 155px;
-  left: 30px;
-  right: 30px;
 }
 
 .publication-cards {
@@ -695,7 +676,7 @@ body {
   color: #24A3FF;
 }
 .publication-text .publication-description {
-  margin-top: 34px;
+  margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
@@ -709,6 +690,13 @@ body {
   text-transform: uppercase;
   color: #B3B3BA;
   letter-spacing: 1px;
+}
+.publication-text .decor {
+  width: 100%;
+  height: 4px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #E6E6F0;
 }
 
 @media (min-width: 768px) {
