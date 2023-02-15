@@ -700,24 +700,19 @@ body {
 
 @media (min-width: 768px) {
   .wrapper {
-    width: 648px;
-  }
-  .partners-wrapper {
-    width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 60px;
+    gap: 60px;
   }
   .content .description {
     margin-bottom: 0;
   }
   .service {
-    width: 294px;
+    width: calc(50% - 30px);
   }
   .services {
     padding-top: 60px;
@@ -727,12 +722,12 @@ body {
     font-size: 38px;
     line-height: 46px;
   }
+  .partner-link {
+    width: 33.3%;
+  }
   .partner-links {
     display: flex;
     flex-wrap: wrap;
-  }
-  .partner-links .partner {
-    width: 256px;
   }
   .partner-links .partner-link:nth-of-type(n+7) {
     display: block;
@@ -752,7 +747,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px;
   }
   .publications-title {
     margin-top: 10px;
@@ -761,16 +756,10 @@ body {
   }
   .cards {
     display: flex;
-    max-width: 309px;
-  }
-  .cards:nth-of-type(1)::after {
-    bottom: 215px;
+    width: calc(50% - 15px);
   }
   .cards:last-of-type {
-    max-width: 648px;
-  }
-  .cards:last-of-type::after {
-    bottom: 89px;
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {

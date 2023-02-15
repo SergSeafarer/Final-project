@@ -6,20 +6,14 @@
 
 @media (min-width: 768px) {
   .wrapper {
-    width: 648px;
-  }
-
-  .partners-wrapper {
-    width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 60px;
+    gap: 60px;
 
     & .description {
       margin-bottom: 0;
@@ -27,7 +21,7 @@
   }
 
   .service {
-    width: 294px;
+    width: calc(50% - 30px);
   }
 
   .services {
@@ -40,13 +34,13 @@
     }
   }
 
+  .partner-link {
+    width: 33.3%;
+  }
+
   .partner-links {
     display: flex;
     flex-wrap: wrap;
-
-    & .partner {
-      width: 256px;
-    }
 
     & .partner-link:nth-of-type(n+7) {
       display: block;
@@ -71,7 +65,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px;
   }
 
   .publications-title {
@@ -82,18 +76,10 @@
 
   .cards {
     display: flex;
-    max-width: 309px;
-
-    &:nth-of-type(1)::after {
-      bottom: 215px;
-    }
+    width: calc(50% - 15px);
 
     &:last-of-type {
-      max-width: 648px;
-
-      &::after {
-        bottom: 89px;
-      }
+      width: 100%;
     }
   }
 }
