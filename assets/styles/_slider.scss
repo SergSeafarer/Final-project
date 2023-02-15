@@ -39,6 +39,7 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
+  align-self: center;
   row-gap: 30px;
 
   & .slider-description {
