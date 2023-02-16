@@ -1,0 +1,87 @@
+@use "./variables" as v;
+
+@mixin font($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+.list {
+  display: flex;
+
+  &--overflow {
+    overflow-x: auto;
+  }
+ 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    flex-shrink: 0;
+
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+
+  &__title {
+    @include font(30px, v.$titleFontWeight, 37px);
+    color: #B3B3BA;
+    margin-top: v.$defaultMargin;
+    margin-bottom: v.$defaultMargin;
+
+    &--active {
+      background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .list {
+    &__title {
+      @include font(38px, v.$titleFontWeight, 46px);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .list {
+    flex-direction: column;
+    row-gap: 30px;
+    align-self: center;
+    align-items: flex-end;
+    width: calc(50% - 64px);
+
+    &--overflow {
+      overflow-x: none;
+    }
+
+    &__link:not(:last-of-type) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .list {
+    width: 36%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .list {
+    width: 28%;
+
+    &__title {
+      &--hover:hover {
+        color: #F0145A;
+      }
+    }
+  }
+}

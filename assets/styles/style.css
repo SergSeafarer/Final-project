@@ -321,6 +321,141 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.list {
+  display: flex;
+}
+.list--overflow {
+  overflow-x: auto;
+}
+.list::-webkit-scrollbar {
+  display: none;
+}
+.list__link {
+  text-decoration: none;
+  display: flex;
+  flex-shrink: 0;
+}
+.list__link:not(:last-of-type) {
+  margin-right: 30px;
+}
+.list__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  color: #B3B3BA;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.list__title--active {
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (min-width: 768px) {
+  .list__title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+  }
+}
+@media (min-width: 1024px) {
+  .list {
+    flex-direction: column;
+    row-gap: 30px;
+    align-self: center;
+    align-items: flex-end;
+    width: calc(50% - 64px);
+  }
+  .list--overflow {
+    overflow-x: none;
+  }
+  .list__link:not(:last-of-type) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .list {
+    width: 36%;
+  }
+}
+@media (min-width: 1920px) {
+  .list {
+    width: 28%;
+  }
+  .list__title--hover:hover {
+    color: #F0145A;
+  }
+}
+.priorities {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.priorities__description__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.priorities__description__text {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin: 0;
+}
+.priorities__decor {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .priorities {
+    padding-bottom: 60px;
+    row-gap: 60px;
+  }
+  .priorities__description__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
+  }
+}
+@media (min-width: 1024px) {
+  .priorities {
+    flex-direction: row;
+    column-gap: 60px;
+  }
+  .priorities__decor {
+    width: 4px;
+    height: 303px;
+  }
+  .priorities__description {
+    width: calc(50% - 45px);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+}
+@media (min-width: 1440px) {
+  .priorities {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .priorities__description {
+    width: calc(65% - 120px);
+  }
+}
+@media (min-width: 1920px) {
+  .priorities__description {
+    width: calc(75% - 170px);
+  }
+}
 .services {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   padding-top: 30px;
