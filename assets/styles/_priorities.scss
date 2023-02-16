@@ -1,5 +1,5 @@
 @use "./variables" as v;
-@import "./link";
+@import "./list";
 
 @mixin font($fs, $fw, $lh) {
   font-size: $fs;
@@ -32,5 +32,52 @@
     width: 100%;
     height: 4px;
     background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: 768px) {
+  .priorities {
+    padding-bottom: 60px;
+    row-gap: 60px;
+
+    &__description__title {
+      @include font(30px, v.$titleFontWeight, 37px);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .priorities {
+    flex-direction: row;
+    column-gap: 60px;
+
+    &__decor {
+      width: 4px;
+      height: 303px;
+    }
+
+    &__description {
+      width: calc(50% - 45px);
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .priorities {
+    padding-left: 120px;
+    padding-right: 120px;
+
+    &__description {
+      width: calc(65% - 120px);
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .priorities__description {
+    width: calc(75% - 170px);
   }
 }

@@ -41,3 +41,47 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .list {
+    &__title {
+      @include font(38px, v.$titleFontWeight, 46px);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .list {
+    flex-direction: column;
+    row-gap: 30px;
+    align-self: center;
+    align-items: flex-end;
+    width: calc(50% - 64px);
+
+    &--overflow {
+      overflow-x: none;
+    }
+
+    &__link:not(:last-of-type) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .list {
+    width: 36%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .list {
+    width: 28%;
+
+    &__title {
+      &--hover:hover {
+        color: #F0145A;
+      }
+    }
+  }
+}
