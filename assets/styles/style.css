@@ -323,6 +323,7 @@ body {
 
 .list {
   display: flex;
+  min-width: calc(100% + 30px);
 }
 .list--overflow {
   overflow-x: auto;
@@ -354,6 +355,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .list {
+    min-width: calc(100% + 60px);
+  }
   .list__title {
     font-size: 38px;
     font-weight: 700;
@@ -366,7 +370,7 @@ body {
     row-gap: 30px;
     align-self: center;
     align-items: flex-end;
-    width: calc(50% - 64px);
+    min-width: calc(50% - 64px);
   }
   .list--overflow {
     overflow-x: none;
@@ -377,12 +381,12 @@ body {
 }
 @media (min-width: 1440px) {
   .list {
-    width: 36%;
+    min-width: 36%;
   }
 }
 @media (min-width: 1920px) {
   .list {
-    width: 28%;
+    min-width: 385px;
   }
   .list__title--hover:hover {
     color: #F0145A;
@@ -453,9 +457,14 @@ body {
 }
 @media (min-width: 1920px) {
   .priorities__description {
-    width: calc(75% - 170px);
+    width: 861px;
   }
 }
+.wrapper-priorities {
+  padding-left: 30px;
+  padding-right: 0;
+}
+
 .services {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   padding-top: 30px;
@@ -472,6 +481,17 @@ body {
   left: 20px;
   right: 20px;
   background-color: #CACADB;
+}
+.services::before {
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: calc(100% + 10px);
+  bottom: 0;
+  left: 40px;
+  right: 40px;
+  border-radius: 0 0 12px 12px;
+  background-color: #E7E7F2;
 }
 .services .service-link {
   font-size: 14px;
@@ -557,17 +577,6 @@ body {
   position: relative;
   padding-top: 50px;
 }
-.slider::before {
-  content: "";
-  height: 10px;
-  position: absolute;
-  top: 10px;
-  bottom: 0;
-  left: 40px;
-  right: 40px;
-  border-radius: 0 0 12px 12px;
-  background-color: #E7E7F2;
-}
 .slider .slider-content {
   border-radius: 12px;
   background-color: #F5F5FA;
@@ -577,7 +586,6 @@ body {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-self: center;
   row-gap: 30px;
 }
 .team-description .slider-description {
@@ -665,15 +673,19 @@ body {
   margin-bottom: 30px;
 }
 
-.partner {
+.partner-link {
   width: 100%;
   height: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #1C4280;
-  background-image: url(../images/hillel-logo.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.first-partner {
+  background-color: #1C4280;
+  background-image: url(../images/hillel-logo.png);
 }
 
 .second-partner {
@@ -934,12 +946,14 @@ body {
 }
 @media (min-width: 1920px) {
   .wrapper {
-    padding-left: 160px;
-    padding-right: 160px;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .partners-wrapper {
-    padding-left: 100px;
-    padding-right: 100px;
+    max-width: 1720px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .services .service-link:hover {
     color: #F0145A;
@@ -947,24 +961,16 @@ body {
   .services .service-link:hover::after {
     content: url(../images/arrow-red.png);
   }
-  .first-partner {
-    border-top-left-radius: 10px;
-  }
-  .fourth-partner {
-    border-top-right-radius: 10px;
-  }
-  .nineth-partner {
-    border-bottom-left-radius: 10px;
-  }
-  .twelveth-partner {
-    border-bottom-right-radius: 10px;
-  }
   .photo {
     min-height: 298px;
     border-radius: 12px 0 0 12px;
   }
   .partners {
     padding-bottom: 60px;
+  }
+  .partner-links {
+    border-radius: 10px;
+    overflow: hidden;
   }
 }
 

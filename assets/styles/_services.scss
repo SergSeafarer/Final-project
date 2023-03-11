@@ -6,6 +6,11 @@
   line-height: $lh;
 }
 
+.wrapper-priorities {
+  padding-left: 30px;
+  padding-right: 0;
+}
+
 .services {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   padding-top: 30px;
@@ -22,6 +27,18 @@
     left: 20px;
     right: 20px;
     background-color:  #CACADB;
+  }
+
+  &::before {
+    content: '';
+    height: 10px;
+    position: absolute;
+    top: calc(100% + 10px);
+    bottom: 0;
+    left: 40px;
+    right: 40px;
+    border-radius: 0 0 12px 12px;
+    background-color: #E7E7F2;
   }
 
   & .service-link {

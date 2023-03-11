@@ -17,18 +17,6 @@
   position: relative;
   padding-top: 50px;
 
-  &::before {
-    content: '';
-    height: 10px;
-    position: absolute;
-    top: 10px;
-    bottom: 0;
-    left: 40px;
-    right: 40px;
-    border-radius: 0 0 12px 12px;
-    background-color: #E7E7F2;
-  }
-
   & .slider-content {
     border-radius: 12px;
     background-color: #F5F5FA;
@@ -39,7 +27,6 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-self: center;
   row-gap: 30px;
 
   & .slider-description {

@@ -19,15 +19,19 @@
   }
 }
 
-.partner {
+.partner-link {
   width: 100%;
   height: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #1C4280;
-  background-image: url(../images/hillel-logo.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.first-partner {
+  background-color: #1C4280;
+  background-image: url(../images/hillel-logo.png);
 }
 
 .second-partner {

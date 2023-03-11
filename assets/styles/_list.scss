@@ -8,6 +8,7 @@
 
 .list {
   display: flex;
+  min-width: calc(100% + 30px);
 
   &--overflow {
     overflow-x: auto;
@@ -44,6 +45,8 @@
 
 @media (min-width: 768px) {
   .list {
+    min-width: calc(100% + 60px);
+
     &__title {
       @include font(38px, v.$titleFontWeight, 46px);
     }
@@ -56,7 +59,7 @@
     row-gap: 30px;
     align-self: center;
     align-items: flex-end;
-    width: calc(50% - 64px);
+    min-width: calc(50% - 64px);
 
     &--overflow {
       overflow-x: none;
@@ -70,13 +73,13 @@
 
 @media (min-width: 1440px) {
   .list {
-    width: 36%;
+    min-width: 36%;
   }
 }
 
 @media (min-width: 1920px) {
   .list {
-    width: 28%;
+    min-width: 385px;
 
     &__title {
       &--hover:hover {
