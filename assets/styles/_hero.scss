@@ -1,0 +1,163 @@
+@use "./variables" as v;
+
+@mixin font($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+.screen-header {
+  display: none;
+}
+
+.mobile-header {
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  padding-bottom: 60px;
+  background-color: #323264;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/hero-image.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.title-container {
+  text-align: center;
+  max-width: 315px;
+  
+  & .hero-title {
+    @include font(38px, v.$titleFontWeight, 46px);
+    color: #FFFFFF;
+  }
+}
+
+.scroll-button {
+  border: none;
+  background-color: transparent;
+}
+
+.hero-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(245, 245, 250, 0.2);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.languages {
+  & .languages-link {
+    @include font(12px, v.$titleFontWeight, 15px);
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 7px;
+
+    &.active {
+      background-color: #F0145A;
+      border-radius: 8px;
+    }
+  }
+}
+
+.phone-number {
+  & .languages-link {
+    @include font(16px, v.$titleFontWeight, 20px);
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hlegal-logo {
+  display: flex;
+
+  & .logo-link {
+    text-decoration: none;
+  }
+
+  & .hlegal-services {
+    margin: v.$defaultMargin;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+
+  & .slash {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+.burger-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 50px;
+  }
+
+  .title-container {
+    max-width: 800px;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  .screen-header {
+    display: block;
+    width: 100%;
+
+    & p {
+      margin: 0;
+      @include font(16px, 400, 20px);
+      color: #B3B3BA;
+    }
+
+    & .languages {
+      display: flex;
+      align-items: center;
+
+      & .facebook-link {
+        text-decoration: none;
+        text-transform: none;
+      }
+
+      & .bullet:nth-of-type(n+4)::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #B3B3BA;
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    background-size: contain;
+  }
+}
