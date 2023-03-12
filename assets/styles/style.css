@@ -493,13 +493,34 @@ body {
     text-decoration: none;
     margin-right: 15px;
   }
-  .screen-navigation .navigation-link:nth-last-of-type {
+  .screen-navigation .navigation-link:last-of-type {
     margin-right: 0;
   }
 }
 @media (min-width: 1024px) {
   .hero {
     background-size: contain;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .hlegal-logo {
+    order: -1;
+    margin: 0;
+    width: 40%;
+    max-height: 48px;
+  }
+  .screen-navigation {
+    display: flex;
+    margin-left: auto;
+  }
+}
+@media (min-width: 1440px) {
+  .hlegal-logo {
+    width: 50%;
   }
 }
 .list {
@@ -1244,6 +1265,7 @@ body {
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
+    padding: 0;
   }
   .partners-wrapper {
     max-width: 1720px;
